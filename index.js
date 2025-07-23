@@ -8,7 +8,7 @@ admin.initializeApp({ credential: admin.credential.cert(serviceAccount), });
 
 const db = admin.firestore(); const PAYSTACK_SECRET = process.env.PAYSTACK_SECRET;
 
-const generateReferralLink = (uid) => https://vest.com/ref/${uid};
+const generateReferralLink = (uid) => `https://vest.com/ref/${uid}`;
 
 // Signup app.post("/signup", async (req, res) => { const { email, password, referredBy } = req.body; try { const userRecord = await admin.auth().createUser({ email, password }); const uid = userRecord.uid; const referralLink = generateReferralLink(uid);
 
